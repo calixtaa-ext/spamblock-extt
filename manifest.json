@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Spamblock",
+  "version": "1.0",
+  "description": "Spam Block",
+  "permissions": [
+    "cookies",
+    "webNavigation",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://business.valley.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://business.valley.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
