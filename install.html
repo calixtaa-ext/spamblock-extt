@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Install Extension</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: #24292e;
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+            color: #e1e4e8;
+        }
+        
+        .content {
+            padding: 40px 30px;
+        }
+        
+        .browser-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .browser-card {
+            background: #f6f8fa;
+            border-radius: 12px;
+            padding: 25px;
+            border: 1px solid #e1e4e8;
+            transition: transform 0.3s ease;
+        }
+        
+        .browser-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .browser-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+        
+        .browser-card h2 {
+            color: #24292e;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+        
+        .steps {
+            list-style: none;
+            margin: 20px 0;
+        }
+        
+        .steps li {
+            margin-bottom: 12px;
+            padding-left: 28px;
+            position: relative;
+        }
+        
+        .steps li:before {
+            content: "✓";
+            color: #2ea44f;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .button {
+            display: inline-block;
+            background: #2ea44f;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 15px;
+            transition: background 0.3s ease;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+            font-size: 16px;
+        }
+        
+        .button:hover {
+            background: #2c974b;
+        }
+        
+        .download-section {
+            background: #f6f8fa;
+            border-radius: 12px;
+            padding: 30px;
+            margin-top: 30px;
+            text-align: center;
+            border: 2px dashed #e1e4e8;
+        }
+        
+        .download-section h3 {
+            color: #24292e;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+        
+        .big-button {
+            background: #24292e;
+            padding: 18px 36px;
+            font-size: 1.3em;
+            width: auto;
+            display: inline-block;
+        }
+        
+        .big-button:hover {
+            background: #2c974b;
+        }
+        
+        .note {
+            background: #fff3cd;
+            border: 1px solid #ffeeba;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 30px 0;
+            color: #856404;
+        }
+        
+        .note strong {
+            color: #533f03;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 30px;
+            background: #f6f8fa;
+            border-top: 1px solid #e1e4e8;
+            color: #586069;
+        }
+        
+        .footer a {
+            color: #0366d6;
+            text-decoration: none;
+        }
+        
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .browser-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🌟 My Awesome Extension</h1>
+            <p>Enhance your browsing experience with powerful features</p>
+        </div>
+        
+        <div class="content">
+            <div class="browser-grid">
+                <!-- Chrome / Chromium Browsers -->
+                <div class="browser-card">
+                    <div class="browser-icon">🌐</div>
+                    <h2>Chrome / Edge / Brave / Opera</h2>
+                    <ul class="steps">
+                        <li>Download the ZIP archive</li>
+                        <li>Extract files to a folder</li>
+                        <li>Open <code>chrome://extensions/</code></li>
+                        <li>Enable <strong>"Developer mode"</strong> (top right)</li>
+                        <li>Click <strong>"Load unpacked"</strong></li>
+                        <li>Select the extracted folder</li>
+                    </ul>
+                    <a href="#download" class="button">📥 Download ZIP</a>
+                </div>
+                
+                <!-- Firefox -->
+                <div class="browser-card">
+                    <div class="browser-icon">🦊</div>
+                    <h2>Firefox</h2>
+                    <ul class="steps">
+                        <li>Download the .xpi file</li>
+                        <li>Drag and drop it into Firefox</li>
+                        <li>Click "Add" when prompted</li>
+                        <li>Or open <code>about:addons</code></li>
+                        <li>Click gear icon → Install from file</li>
+                    </ul>
+                    <a href="#download" class="button">🦊 Download .xpi</a>
+                </div>
+            </div>
+            
+            <div class="note">
+                <strong>⚠️ Developer Mode Required:</strong> 
+                Since this extension is not from the official store, Chromium-based browsers (Chrome, Edge, Brave) 
+                require Developer Mode for installation. This is completely safe and only takes 2 seconds to enable.
+            </div>
+            
+            <div id="download" class="download-section">
+                <h3>📦 Download Latest Version</h3>
+                <p style="margin-bottom: 30px; color: #586069;">
+                    Version 1.0.0 • Last updated: February 2026
+                </p>
+                
+                <a href="https://github.com/YOUR_USERNAME/YOUR_REPOSITORY/archive/refs/heads/main.zip" 
+                   class="button big-button">
+                   ⬇️ Download Extension (ZIP)
+                </a>
+                
+                <p style="margin-top: 20px; color: #586069; font-size: 0.9em;">
+                    Or <a href="https://github.com/YOUR_USERNAME/YOUR_REPOSITORY/releases" 
+                          style="color: #0366d6;">view all releases on GitHub</a>
+                </p>
+            </div>
+            
+            <div style="margin-top: 40px;">
+                <h3 style="color: #24292e; margin-bottom: 20px;">❓ Need Help?</h3>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                    <div>
+                        <h4 style="color: #24292e; margin-bottom: 10px;">📋 Step-by-Step Video</h4>
+                        <p style="color: #586069;">Watch how to install in 1 minute</p>
+                    </div>
+                    
+                    <div>
+                        <h4 style="color: #24292e; margin-bottom: 10px;">🐛 Report Bug</h4>
+                        <p style="color: #586069;">Found an issue? <a href="https://github.com/YOUR_USERNAME/YOUR_REPOSITORY/issues" 
+                           style="color: #0366d6;">Report it on GitHub</a></p>
+                    </div>
+                    
+                    <div>
+                        <h4 style="color: #24292e; margin-bottom: 10px;">💬 Feedback</h4>
+                        <p style="color: #586069;">Questions? <a href="mailto:your@email.com" 
+                           style="color: #0366d6;">Send us an email</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>
+                <a href="https://github.com/YOUR_USERNAME/YOUR_REPOSITORY">GitHub Repository</a> • 
+                <a href="#">Privacy Policy</a> • 
+                <a href="#">Terms of Use</a>
+            </p>
+            <p style="margin-top: 15px; font-size: 0.9em;">
+                Open source extension. Free forever. No ads. No tracking.
+            </p>
+            <p style="margin-top: 20px; font-size: 0.8em;">
+                © 2026 My Awesome Extension. Made with ❤️ for the community.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
